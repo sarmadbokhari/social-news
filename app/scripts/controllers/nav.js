@@ -9,4 +9,8 @@ app.controller('NavCtrl', function($scope, $location, Post){
         $scope.post = {url: 'http://', title: ''};
     });
   };
+
+  $scope.logout = function(){
+    Auth.logout();
+  }
 });

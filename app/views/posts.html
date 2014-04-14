@@ -7,8 +7,9 @@
     <div class="col-md-9 col-xs-11">
 
       <div class="info">
-        <a href="{{ post.url }}">
+        <a href="{{ post.url }}" target="_blank">
           {{ post.title }}
+          <span class="url">({{ post.url | hostnameFromUrl }})</span>
         </a>
       </div>
       <div>

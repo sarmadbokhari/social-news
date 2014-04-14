@@ -7,7 +7,7 @@ var app = angular.module('angNewsApp', [
     'ngRoute',
     'firebase'
   ])
-  .constant('FIREBASE_URL', 'https://sizzling-fire-2266.firebaseIO.com/');
+  .constant('FIREBASE_URL', 'LINK GOES HERE');
 
   app.config(function ($routeProvider) {
     $routeProvider
@@ -18,6 +18,14 @@ var app = angular.module('angNewsApp', [
       .when('/posts/:postId', {
         templateUrl: 'views/showpost.html',
         controller: 'PostViewCtrl'
+      })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'AuthCtrl'
+      })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'AuthCtrl'
       })
       .otherwise({
         redirectTo: '/'
